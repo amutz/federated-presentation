@@ -13,7 +13,7 @@ App = Ember.Application.extend({
   podModulePrefix: config.podModulePrefix,
   Resolver: Resolver,
   ApplicationAdapter: DS.JSONAPIAdapter.extend({}),
-  ApplicationSerializer: DS.JSONAPISerializer.extend({})
+  ApplicationSerializer: DS.JSONAPISerializer.extend(DS.EmbeddedRecordsMixin, {})
 });
 
 
