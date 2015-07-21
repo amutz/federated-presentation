@@ -25,6 +25,18 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.SocketURI = "ws://localhost:4000/";
+  
+  
+    ENV.contentSecurityPolicy = {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self'",
+      'connect-src': "*",
+      'img-src': "'self'",
+      'style-src': "'unsafe-inline' *",
+      'media-src': "'self'"
+    }
   }
 
   if (environment === 'test') {

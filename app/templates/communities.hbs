@@ -2,7 +2,7 @@ Community: {{model.name}} <br>
 Submissions: <br>
 <ul>
 {{#each model.submissions as |submission| }}
-<li>{{submission.title}} - {{submission.link}}</li>
+<li {{action "acceptChanges" submission on="focusOut"}}>{{input value=submission.title }} {{submission.title}} - {{submission.link}}</li>
 {{/each}}
 </ul>
 Submit a new link:
